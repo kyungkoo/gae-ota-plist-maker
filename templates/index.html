@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTA plist Maker</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+
+  <style>
+  #contents {
+    margin: 10px;
+  }
+  </style>
+
+</head>
+<body id="contents">
+  <div>
+    <p>for OTA in Dropbox, you should make plist file.</p>
+    <p>This page will help you.</p>
+  </div>
+
+  <div>
+    <form class="pure-form pure-form-aligned" action="/makePlist" method="POST">
+      <fieldset>
+        <div class="pure-control-group">
+          <label for="app-url">URL</label>
+          <input id="app-url" name="app-url" type="text" placeholder="Dropbox App URL">
+        </div>
+
+        <div class="pure-control-group">
+          <label for="app-bundle-id">Bundle ID</label>
+          <input id="app-bundle-id" name="app-bundle-id" type="text" placeholder="App Bundle ID">
+        </div>
+
+        <div class="pure-control-group">
+          <label for="app-version">Version</label>
+          <input id="app-version" name="app-version" type="text" placeholder="App Version">
+        </div>
+
+        <div class="pure-control-group">
+          <label for="app-name">App Name</label>
+          <input id="app-name" name="app-name" type="text" placeholder="Application Name">
+        </div>
+
+        <div class="pure-controls">
+          <button type="submit" class="pure-button pure-button-primary">Make!</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
