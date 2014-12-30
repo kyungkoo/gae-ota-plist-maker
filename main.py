@@ -17,8 +17,6 @@ from OTAMaker import *
 
 app = Flask(__name__)
 
-# make_plist_data = ""
-
 @app.route('/')
 def main_page():
     return render_template('index.html')
@@ -26,8 +24,6 @@ def main_page():
 
 @app.route('/makePlist', methods=['POST'])
 def generate_plist():
-    # global make_plist_data
-
     url = request.form['app-url']
     bundle_id = request.form['app-bundle-id']
     app_version = request.form['app-version']
@@ -44,4 +40,5 @@ def return_make_plist(filename):
     plist = session['plist']
     return Response(plist, mimetype="application/x-plist")
 
+#secret key for using session
 app.secret_key = os.urandom(24)
