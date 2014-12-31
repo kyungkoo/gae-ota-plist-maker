@@ -40,5 +40,10 @@ def return_make_plist(filename):
     plist = session['plist']
     return Response(plist, mimetype="application/x-plist")
 
+
+@app.route('/downloadPage')
+def download_page():
+    return render_template('download.html')
+
 #secret key for using session
 app.secret_key = os.urandom(24)
